@@ -1,0 +1,8 @@
+{
+  "name": "mini-social",
+  "version": "1.0.0",
+  "description": "Mini social media app: profiles, posts, comments, likes, follows",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "better-sqlite3": "^12.0.0", "express": "^4.19.2" }
+}

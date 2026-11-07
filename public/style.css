@@ -1,0 +1,31 @@
+:root { --accent: #6d4aff; --bg: #f4f3fa; --card: #fff; --text: #1d1b2b; --muted: #77748a; --line: #e4e2ef; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #14131c; --card: #1e1c2b; --text: #ecebf5; --muted: #9a97b0; --line: #2d2a40; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+a { color: var(--accent); text-decoration: none; }
+header { display: flex; gap: 14px; align-items: center; padding: 10px 20px; background: var(--card); border-bottom: 1px solid var(--line); position: sticky; top: 0; }
+header[hidden] { display: none; }
+.brand { font-weight: 700; font-size: 1.15rem; margin-right: auto; }
+main { max-width: 600px; margin: 20px auto; padding: 0 12px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; }
+input, textarea { width: 100%; padding: 9px 11px; margin-bottom: 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text); font: inherit; }
+header input { margin: 0; width: 170px; }
+textarea { resize: vertical; min-height: 70px; }
+button { padding: 7px 14px; border: 0; border-radius: 8px; background: var(--accent); color: #fff; font: inherit; cursor: pointer; }
+button.alt, button.on { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.actions { display: flex; gap: 8px; margin-top: 8px; }
+.actions button { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+.actions button.on { color: #e0245e; border-color: #e0245e; }
+.user { font-weight: 600; }
+time, .muted { color: var(--muted); font-size: .85rem; margin-left: 6px; }
+.card p { margin: 6px 0; word-wrap: break-word; }
+.comments { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 6px; }
+.comments form, #bioForm { display: flex; gap: 8px; }
+.comments input, #bioForm input { margin: 0; }
+.tabs { display: flex; gap: 16px; margin: 4px 0 12px; }
+.tabs a { padding-bottom: 4px; color: var(--muted); }
+.tabs a.on { color: var(--accent); border-bottom: 2px solid var(--accent); }
+#authForm button { margin-right: 8px; }
+#toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #222; color: #fff; padding: 10px 18px; border-radius: 8px; }
